@@ -4,4 +4,4 @@ b=int(arr[1])
 c=int(arr[2])
 
 print(a+b+c)
-print(f"{(a+b+c)/3:.0f}")
+print(int((a+b+c)/3))
