@@ -6,12 +6,7 @@ B=input().split()
 B_math = int(B[0])
 B_english = int(B[1])
 
-if A_math>B_math:
+if A_math>B_math or(A_math==B_math and A_english>B_english):
     print("A")
-elif B_math>A_math:
-    print("B")
 else :
-    if A_english>B_english:
-        print("A")
-    elif B_english>A_english:
-        print("B")
+    print("B")
