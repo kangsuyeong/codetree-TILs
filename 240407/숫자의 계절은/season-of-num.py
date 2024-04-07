@@ -8,4 +8,4 @@ elif m<9:
 elif m<12:
     print("Fall")
 else:
-    print("winter")
+    print("Winter")
