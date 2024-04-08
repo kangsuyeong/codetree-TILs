@@ -7,7 +7,7 @@ B_g=B[0]
 B_t=int(B[1])
 
 C=input().split()
-C_g=A[0]
+C_g=C[0]
 C_t=int(C[1])
 
 if A_g=="Y" and A_t>=37:
