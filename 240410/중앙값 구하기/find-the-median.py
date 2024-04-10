@@ -4,19 +4,9 @@ a=int(arr[0])
 b=int(arr[1])
 c=int(arr[2])
 
-if a>b :
-    if b>c:
-        print(b)
-    else :
-        if(a>c):
-            print(c)
-        else:
-            print(a)
-else :
-    if b<c:
-        print(c)
-    else :
-        if a>c:
-            print(a)
-        else:
-            print(c)
+if (a>b and b>c)or(c>b and b>a) :
+    print(b)
+elif (b>a and a>c) or (c>a and a>b):
+    print(a)
+else:
+    print(c)
