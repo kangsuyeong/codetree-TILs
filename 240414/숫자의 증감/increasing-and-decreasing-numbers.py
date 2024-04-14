@@ -9,5 +9,5 @@ if c=='A':
         print(i,end=" ")
 elif c=='D':
     i=n
-    for i in range(n,-1):
+    for i in range(n,1):
         print(i)
