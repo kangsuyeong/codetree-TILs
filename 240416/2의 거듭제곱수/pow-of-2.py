@@ -1,11 +1,10 @@
 n=int(input())
 
-cnt=0
+x=0
+prod=1
 while True:
-    n//=2
-    cnt+=1
-    if(n==1):
+    prod*=2
+    x+=1
+    if prod==n:
         break
-    
-
-print(cnt)
+print(x)
