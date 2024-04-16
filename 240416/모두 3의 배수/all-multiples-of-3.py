@@ -1,10 +1,10 @@
-cnt=0
+satisfied=True
 for i in range(5):
     n=int(input())
-    if n%3==0:
-        cnt+=1
+    if n%3!=0:
+        satisfied=False
 
-if cnt==5:
+if satisfied:
     print(1)
 else :
     print(0)
