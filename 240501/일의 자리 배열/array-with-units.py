@@ -1,6 +1,11 @@
-arr=list(map(int,input().split()))
+arr=[]
+p1,p2=tuple(map(int,input().split()))
 
-for i in range(3,11):
-    arr.append((arr[-1]+arr[-2])%10)
+arr.append(p1)
+arr.append(p2)
 
-print(*arr)
+for i in range(2,10):
+    arr.append((arr[i-2]+arr[i-1])%10)
+
+for elem in arr:
+    print(elem,end=" ")
