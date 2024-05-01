@@ -2,8 +2,6 @@ n=int(input())
 
 cnt=0
 for _ in range(n):
-    sum_val=0
-    avg=0
     arr=list(map(int,input().split()))
     sum_val=sum(arr)
     avg=sum_val/4
