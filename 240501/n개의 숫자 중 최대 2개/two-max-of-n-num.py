@@ -1,11 +1,15 @@
 n=int(input())
 arr=list(map(int,input().split()))
 
-max_val=arr[0]
+if arr[0]>=arr[1]:
+    max1,max2=arr[0],arr[1]
+else:
+    max1,max2=arr[1],arr[0]
 
-for i in range(n):
-    for j in range(i+1,n):
-        if arr[i]<arr[j]:
-            arr[i],arr[j]=arr[j],arr[i]
+for elem in arr:
+    if elem>max1:
+        max1,max2=elem,max1
+    elif elem>max2:
+        max2=elem
 
-print(arr[0],arr[1])
+print(max1,max2)
