@@ -7,6 +7,6 @@ for i in range(a,b+1):
         check = True
 
 if check==True:
-    print("No")
+    print("NO")
 else:
     print("YES")
