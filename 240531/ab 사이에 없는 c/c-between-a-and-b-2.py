@@ -1,8 +1,4 @@
-arr=input().split()
-
-a=int(arr[0])
-b=int(arr[1])
-c=int(arr[2])
+a,b,c=map(int,input().split())
 
 check = False
 
@@ -11,6 +7,6 @@ for i in range(a,b+1):
         check = True
 
 if check==True:
-    print("YES")
+    print("No")
 else:
-    print("NO")
+    print("True")
