@@ -9,4 +9,4 @@ for i in range(a,b+1):
 if check==True:
     print("No")
 else:
-    print("True")
+    print("YES")
