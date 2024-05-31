@@ -7,7 +7,7 @@ c=int(arr[2])
 check = False
 
 for i in range(a,b+1):
-    if(c%i ==0):
+    if i%c ==0:
         check = True
 
 if check==True:
