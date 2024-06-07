@@ -6,8 +6,9 @@ s=input()
 cnt=0
 sum=0
 for elem in arr:
-    sum+=len(elem)
+
     if s == elem[0]:
         cnt+=1
-avg = sum / len(arr)
+        sum+=len(elem)
+avg = sum / cnt
 print(f'{cnt} {avg:.2f}')
