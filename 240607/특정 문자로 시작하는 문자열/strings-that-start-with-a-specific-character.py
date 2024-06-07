@@ -9,5 +9,5 @@ for elem in arr:
     sum+=len(elem)
     if s == elem[0]:
         cnt+=1
-avg = sum // len(arr)
+avg = sum / len(arr)
 print(f'{cnt} {avg:.2f}')
