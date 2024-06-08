@@ -1,20 +1,20 @@
 string = input()
-new=[]
+
+Encoding=""
+target = string[0]
 cnt=1
 
-for i in range(len(string)):
-    if i == len(string)-1:
-        new.append(string[i])
-        new.append(cnt)
-        break;
-
-    if string[i] == string[i+1]:
+for elem in string[1:]:
+    if target == elem:
         cnt+=1
-    else:
-        new.append(string[i])
-        new.append(cnt)
-        cnt=1
+    else :
+        Encoding+=target
+        Encoding+=str(cnt)
 
-print(len(new))
-for elem in new:
-    print(elem,end="")
+        target=elem
+        cnt=1
+Encoding+=target
+Encoding+=str(cnt)
+
+print(len(Encoding))
+print(Encoding)
