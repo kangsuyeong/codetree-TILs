@@ -1,27 +1,19 @@
 N=int(input())
 
 class Data:
-    def __init__(self,dd,D,W):
-        self.dd=dd
-        self.D=D
-        self.W=W
+    def __init__(self,date,day,weather):
+        self.date=date
+        self.day=day
+        self.weather=weather
 
-data=[]
+
+ans=Data("9999-99-99","","")
 
 for _ in range(N):
-    dd,D,W=input().split()
-    data.append(Data(dd,D,W))
+    date,day,weather=input().split()
+    if weather == "Rain":
+        f=Data(date,day,weather)
+        if ans.date > f.date:
+            ans=f
 
-
-cnt=0
-index=0
-for i in range(N):
-   if data[i].W=="Rain":
-    if cnt==0:
-        index=i
-        cnt+=1
-    else :
-        if data[i].dd<data[index].dd:
-            index=i
-
-print(data[index].dd,data[index].D,data[index].W)
+print(ans.date,ans.day,ans.weather)
