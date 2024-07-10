@@ -10,14 +10,16 @@ diff = sum(num_of_days[1:m2])+d2-(sum(num_of_days[1:m1])+d1)
 cnt=0
 number = diff-day.index(A)
 
-while True:
-    if number<0:
-        break;
-    elif number==0:
-        cnt+=1
-        break
-    else :
-        number-=7
-        cnt+=1
+# while True:
+#     if number<0:
+#         break;
+#     elif number==0:
+#         cnt+=1
+#         break
+#     else :
+#         number-=7
+#         cnt+=1
+
+cnt = (number + 7) //7
 
 print(cnt)
