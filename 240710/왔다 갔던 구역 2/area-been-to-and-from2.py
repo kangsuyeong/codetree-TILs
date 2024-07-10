@@ -17,11 +17,11 @@ for _ in range(n):
     if D == "L":
         for i in range(current-1,current-num-1,-1):
             arr[i]+=1
-            current-=num
+        current-=num
     else:
         for i in range(current,current+num):
             arr[i]+=1
-            current=current+num
+        current=current+num
 
 total=0
 for elem in arr:
