@@ -10,11 +10,11 @@ for _ in range(n):
     if D=='R':
         for i in range(current,current+num):
             arr[i]=2
-        current+=num
+        current=current+num-1
     else:
-        for i in range(current-num,current):
+        for i in range(current,current-num,-1):
             arr[i]=1
-        current-=num
+        current=current-num+1
 
 white_cnt=0
 black_cnt=0
