@@ -24,5 +24,7 @@ for i in range(x1,x2+1):
             x_max=max(x_max,i)
             y_min=min(y_min,j)
             y_max=max(y_max,j)
-
-print((x_max-x_min)*(y_max-y_min))
+if x_max-x_min<0 or y_max-y_min<0:
+    print(0)
+else:
+    print((x_max-x_min)*(y_max-y_min))
