@@ -4,7 +4,7 @@ r,c=int(r),int(c)
 
 arr=[[0]*(n+1) for _ in range(n+1)]
 
-dxs,dys=[1,0,0,-1],[0,-1,1,0]
+dxs,dys=[1,0,0,-1],[0,1,-1,0]
 mapper={
     'U':2,
     'D':1,
