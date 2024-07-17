@@ -53,4 +53,5 @@ for i in range(19):
                 win_y=j-2
                 break;
 print(win)
-print(win_x+1,win_y+1)
+if win!=0:
+    print(win_x+1,win_y+1)
