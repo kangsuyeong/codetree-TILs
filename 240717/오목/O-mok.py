@@ -10,48 +10,23 @@ win=0
 win_x=0
 win_y=0
 
+dx,dy=[0,1,1,1],[1,1,0,-1]
+
 for i in range(19):
     for j in range(19):
-        #가로
-        cnt=0
-        for k in range(5):
-            if arr[i][j]!=0 and in_range(i,j+k) and arr[i][j+k]==arr[i][j]:
-                cnt+=1
-            if cnt==5:
-                win=arr[i][j]
-                win_x=i
-                win_y=j+2
-                break;
 
-        cnt=0
-        for k in range(5):
-            if arr[i][j]!=0 and in_range(i+k,j) and arr[i+k][j]==arr[i][j]:
-                cnt+=1
-            if cnt==5:
-                win=arr[i][j]
-                win_x=i+2
-                win_y=j
-                break;
 
-        cnt=0
-        for k in range(5):
-            if arr[i][j]!=0 and in_range(i+k,j+k) and arr[i+k][j+k]==arr[i][j]:
-                cnt+=1
-            if cnt==5:
-                win=arr[i][j]
-                win_x=i+2
-                win_y=j+2
-                break;
+        for k in range(4):
+            cnt=1
+            for l in range(1,5):
+                if arr[i][j]!=0 and in_range(i+dx[k]*l,j+dy[k]*l) and arr[i+dx[k]*l][j+dy[k]*l]==arr[i][j]:
+                    cnt+=1
+                if cnt==5:
+                    win=arr[i][j]
+                    win_x=i+dx[k]*2
+                    win_y=j+dy[k]*2
+                
 
-        cnt=0
-        for k in range(5):
-            if arr[i][j]!=0 and in_range(i+k,j-k) and arr[i+k][j-k]==arr[i][j]:
-                cnt+=1
-            if cnt==5:
-                win=arr[i][j]
-                win_x=i+2
-                win_y=j-2
-                break;
 print(win)
 if win!=0:
     print(win_x+1,win_y+1)
