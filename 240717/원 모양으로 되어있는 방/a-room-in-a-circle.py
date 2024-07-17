@@ -11,6 +11,6 @@ for i in range(N):
     #거리 계산
     for j in range(N):
         
-        S+=arr[j]*((j-i)%5)
+        S+=arr[j]*((j-i)%N)
     min_num=min(min_num,S)
 print(min_num)
