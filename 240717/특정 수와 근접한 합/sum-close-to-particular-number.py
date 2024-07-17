@@ -8,7 +8,7 @@ min_num=sys.maxsize
 
 s2=0
 for i in range(N):
-    for j in range(i,N):
+    for j in range(i+1,N):
         s2=arr[i]+arr[j]
         min_num=min(min_num,abs(S-(s1-s2)))
 
