@@ -38,7 +38,7 @@ def simulate():
                     if in_range(nx,ny) and max_num<arr[nx][ny]:
                         max_num=arr[nx][ny]
                         max_x,max_y=nx,ny
-                new_Count[max_x][max_y]=1           
+                new_Count[max_x][max_y]+=1           
     
     for i in range(1,n+1):
         for j in range(1,n+1):
