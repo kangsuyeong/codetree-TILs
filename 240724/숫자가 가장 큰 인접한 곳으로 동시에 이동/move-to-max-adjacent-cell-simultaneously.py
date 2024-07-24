@@ -12,7 +12,7 @@ new_Count = [
     for _ in range(n+1)
 ]
 # 카운트에 채우기
-for _ in range(3):
+for _ in range(m):
     r,c=map(int,input().split())
     Count[r][c]=1
 
