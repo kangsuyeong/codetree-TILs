@@ -31,7 +31,7 @@ def move(x,y,current_num):
 temp.append(arr[r][c])
 
 while True:
-    if move(r,c,arr[r][c])==False:
+    if not move(r,c,arr[r][c]):
         break;
 
 for elem in temp:
