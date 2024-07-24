@@ -1,8 +1,6 @@
 n=int(input())
-arr=[]
+arr=[int(input()) for _ in range(n)]
 
-for _ in range(n):
-    arr.append(int(input()))
 
 
 
