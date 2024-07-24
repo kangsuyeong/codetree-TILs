@@ -23,6 +23,10 @@ def in_range(x,y):
     return 0<x<=n and 0<y<=n
 
 def simulate():
+    for i in range(1,n+1):
+        for j in range(1,n+1):
+            new_Count[i][j]=0
+
     global Count,arr
     for i in range(1,n+1):
         for j in range(1,n+1):
@@ -35,7 +39,10 @@ def simulate():
                         max_num=arr[nx][ny]
                         max_x,max_y=nx,ny
                 new_Count[max_x][max_y]=1           
-    Count=new_Count
+    
+    for i in range(1,n+1):
+        for j in range(1,n+1):
+            Count[i][j]=new_Count[i][j]
 
 
 def remove_dup():
@@ -47,10 +54,6 @@ def remove_dup():
 for _ in range(t):
     simulate()
     remove_dup()
-    new_Count = [
-    [0]*(n+1)
-    for _ in range(n+1)
-    ]
 
 
 s=0
