@@ -21,15 +21,27 @@
 
 N,M = map(int,input().split())
 answer=[]
-def choose(curr_num):
-    if curr_num==M+1:
-        print(*answer,sep=" ")
+
+#0 혹은 1로 채울건데,
+# 첫번째 부터 curr_num-1번째까지 이미 채운 상태에서 ...
+# curr_num번째를 채울거고
+# 지금 상태는 1의 개수가 one_cnt인 상황
+def choose(curr_num,one_cnt):
+    # 종료 조건
+    if curr_num==N+1:
+        if one_cnt == M:
+            print(*answer,sep=" ")
         return
     
-    for i in range(1,N+1):
-        if curr_num==1 or i>answer[-1]:
-            answer.append(i)
-            choose(curr_num+1)
-            answer.pop()
+    # 호출
+    answer.append(curr_num)
+    choose(curr_num+1,one_cnt+1)
+    answer.pop()
 
-choose(1)
+  
+    choose(curr_num+1,one_cnt)
+    
+
+
+
+choose(1,0)
