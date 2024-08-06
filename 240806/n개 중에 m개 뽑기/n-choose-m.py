@@ -25,8 +25,8 @@
 # curr_num번째를 채울거고
 # 지금 상태는 1의 개수가 one_cnt인 상황
 
-N,M = map(int,input().split())
-answer=[]
+# N,M = map(int,input().split())
+# answer=[]
 
 # def choose(curr_num,one_cnt):
 #     # 종료 조건
@@ -46,14 +46,36 @@ answer=[]
 
 # choose(1,0)
 
-def FindCombination(cnt,last_num):
-    if cnt == M:
-        print(*answer)
+# def FindCombination(cnt,last_num):
+#     if cnt == M:
+#         print(*answer)
+#         return
+
+#     for i in range(last_num+1,N+1):
+#         answer.append(i)
+#         FindCombination(cnt+1,i)
+#         answer.pop()
+
+# FindCombination(0,0)
+
+N,M = map(int,input().split())
+
+answer=[]
+
+def choose(curr_num,cnt):
+    if curr_num==N+1:
+        if cnt==M:
+            print(*answer,sep=" ")
         return
+    
+    answer.append(curr_num)
+    choose(curr_num+1,cnt+1)
+    answer.pop()
 
-    for i in range(last_num+1,N+1):
-        answer.append(i)
-        FindCombination(cnt+1,i)
-        answer.pop()
 
-FindCombination(0,0)
+    choose(curr_num+1,cnt)
+
+
+    
+
+choose(1,0)
