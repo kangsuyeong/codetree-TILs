@@ -22,17 +22,37 @@
 
 # choose(1)
 
-K,N= map(int,input().split())
+# K,N= map(int,input().split())
+# answer=[]
+
+# # 첫 번째부터 curr_num-1까지 선택을 했고, curr_num번째 수를 이제 고를 차례
+# def choose(curr_num):
+#     # 종료 조건
+#     if curr_num==N+1:
+#         print(*answer,sep=" ")
+#         return
+#     # 다음 호출
+#     for i in range(1,K+1):
+#         answer.append(i)
+#         choose(curr_num+1)
+#         answer.pop()
+
+# choose(1)
+
+
+K,N=map(int,input().split())
 answer=[]
 
 def choose(curr_num):
     if curr_num==N+1:
         print(*answer,sep=" ")
         return
-
+    
     for i in range(1,K+1):
         answer.append(i)
         choose(curr_num+1)
         answer.pop()
+
+ 
 
 choose(1)
