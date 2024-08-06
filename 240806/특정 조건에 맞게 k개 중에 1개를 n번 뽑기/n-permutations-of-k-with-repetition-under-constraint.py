@@ -27,10 +27,11 @@ def choose(curr_num):
         print(*answer)
         return
     for i in range(1,K+1):
-        # 
-        if curr_num==1 or curr_num==2 or answer[-1]!=i or answer[-2]!=i:
-            answer.append(i)
-            choose(curr_num+1)
-            answer.pop()
+        # i를 추가했을 때, 3개의 연속하게 되는 경우 => continue
+        if curr_num>=3 and answer[-1]==i and answer[-2]==i:
+            continue
+        answer.append(i)
+        choose(curr_num+1)
+        answer.pop()
 
 choose(1)
