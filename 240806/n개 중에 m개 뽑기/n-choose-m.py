@@ -19,29 +19,41 @@
 
 # choose(1,0)
 
-N,M = map(int,input().split())
-answer=[]
 
 #0 혹은 1로 채울건데,
 # 첫번째 부터 curr_num-1번째까지 이미 채운 상태에서 ...
 # curr_num번째를 채울거고
 # 지금 상태는 1의 개수가 one_cnt인 상황
-def choose(curr_num,one_cnt):
-    # 종료 조건
-    if curr_num==N+1:
-        if one_cnt == M:
-            print(*answer,sep=" ")
-        return
+
+N,M = map(int,input().split())
+answer=[]
+
+# def choose(curr_num,one_cnt):
+#     # 종료 조건
+#     if curr_num==N+1:
+#         if one_cnt == M:
+#             print(*answer,sep=" ")
+#         return
     
-    # 호출
-    answer.append(curr_num)
-    choose(curr_num+1,one_cnt+1)
-    answer.pop()
+#     # 호출
+#     answer.append(curr_num)
+#     choose(curr_num+1,one_cnt+1)
+#     answer.pop()
 
   
-    choose(curr_num+1,one_cnt)
-    
+#     choose(curr_num+1,one_cnt)
 
 
+# choose(1,0)
 
-choose(1,0)
+def FindCombination(cnt,last_num):
+    if cnt == M:
+        print(*answer)
+        return
+
+    for i in range(last_num+1,N+1):
+        answer.append(i)
+        FindCombination(cnt+1,i)
+        answer.pop()
+
+FindCombination(0,0)
