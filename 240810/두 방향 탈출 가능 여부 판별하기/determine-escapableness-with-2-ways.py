@@ -17,7 +17,7 @@ visited = [
 
 
 def in_range(x,y):
-    return 0<=x<n and 0<=y<n
+    return 0<=x<n and 0<=y<m
 
 def can_go(x,y):
     if not in_range(x,y):
