@@ -83,7 +83,7 @@ grid = [
 ]
 
 visited=[
-    [0 for _ in range(n)]
+    [0 for _ in range(m)]
     for _ in range(n)
 ]
 
