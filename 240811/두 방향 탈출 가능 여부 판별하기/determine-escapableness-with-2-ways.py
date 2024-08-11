@@ -94,7 +94,7 @@ def dfs(x,y):
     dxs,dys=[0,1],[1,0]
     for dx,dy in zip(dxs,dys):
         nx,ny=x+dx,y+dy
-        if in_range(nx,ny) and not visited[nx][ny] and grid[nx][ny]==1:
+        if in_range(nx,ny) and grid[nx][ny]==1 and not visited[nx][ny] :
             visited[nx][ny]=1
             dfs(nx,ny)
 
