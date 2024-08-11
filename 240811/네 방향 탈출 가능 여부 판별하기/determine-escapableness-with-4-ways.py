@@ -55,8 +55,8 @@ def in_range(x,y):
     return 0<=x<n and 0<=y<m
 
 def bfs():
-    x,y=q.popleft()
     while q:
+        x,y=q.popleft()
         dxs,dys=[0,1,0,-1],[1,0,-1,0]
         for dx,dy in zip(dxs,dys):
             nx,ny=x+dx,y+dy
@@ -67,4 +67,4 @@ def bfs():
 visited[0][0]=1
 q.append((0,0))
 bfs()
-print(visited)
+print(visited[-1][-1])
